@@ -1,0 +1,37 @@
+{
+  "name": "typescript-boilerplate",
+  "version": "1.0.0",
+  "description": "A learning platform for mastering TypeScript through a series of lessons.",
+  "main": "dist/main.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gamazmoon/typescript.git"
+  },
+  "keywords": [
+    "typescript",
+    "learning",
+    "education",
+    "gamazmoon",
+    "tutorial"
+  ],
+  "author": "aryabarzan@gmail.com",
+  "type": "module",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gamazmoon/typescript/issues"
+  },
+  "homepage": "https://gamazmoon.com/",
+  "scripts": {
+    "build": "esbuild src/main.ts src/**/*.ts --outdir=dist --outbase=./src --platform=node --format=esm --sourcemap",
+    "start": "npm run build && node dist/main.js",
+    "dev": "tsx watch src/main.ts",
+    "type-check": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "esbuild": "^0.25.8",
+    "ts-node": "^10.9.2",
+    "ts-node-dev": "^2.0.0",
+    "tsx": "^4.20.3",
+    "typescript": "^5.9.2"
+  }
+}
